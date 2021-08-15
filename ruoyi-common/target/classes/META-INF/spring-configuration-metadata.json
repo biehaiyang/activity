@@ -1,0 +1,48 @@
+{
+  "groups": [
+    {
+      "name": "ruoyi",
+      "type": "com.ruoyi.common.config.RuoYiConfig",
+      "sourceType": "com.ruoyi.common.config.RuoYiConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "ruoyi.address-enabled",
+      "type": "java.lang.Boolean",
+      "description": "获取地址开关",
+      "sourceType": "com.ruoyi.common.config.RuoYiConfig"
+    },
+    {
+      "name": "ruoyi.copyright-year",
+      "type": "java.lang.String",
+      "description": "版权年份",
+      "sourceType": "com.ruoyi.common.config.RuoYiConfig"
+    },
+    {
+      "name": "ruoyi.demo-enabled",
+      "type": "java.lang.Boolean",
+      "description": "实例演示开关",
+      "sourceType": "com.ruoyi.common.config.RuoYiConfig"
+    },
+    {
+      "name": "ruoyi.name",
+      "type": "java.lang.String",
+      "description": "项目名称",
+      "sourceType": "com.ruoyi.common.config.RuoYiConfig"
+    },
+    {
+      "name": "ruoyi.profile",
+      "type": "java.lang.String",
+      "description": "上传路径",
+      "sourceType": "com.ruoyi.common.config.RuoYiConfig"
+    },
+    {
+      "name": "ruoyi.version",
+      "type": "java.lang.String",
+      "description": "版本",
+      "sourceType": "com.ruoyi.common.config.RuoYiConfig"
+    }
+  ],
+  "hints": []
+}
