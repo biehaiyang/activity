@@ -145,5 +145,5 @@ public class Constants
     public static String alipaypublickey = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlLg7YkRi0U1tGDorUOykr+TmNsSR1A8CWxYVZVhpsYFZAUXD9eDwCZouv0ujWvMWP1e38yXH7eUxHNP9dyVlB0BelTN4BECrd8pm+hqalIKaalPG50UNVHSErJvtw5vDoEPspGvIJPRXrFoz2pKE0EcAliOFT5Pt6nNz8wcCKMyTyCaDZnkg74AVk6BDfbe/pUsVmta4Tfe2UJJQA9aj22ZyIPvH8IYhcfOS34qu3TdQTR1m8hDUjKiNMUpgqSDE2MypHeT8TsbaDagrHWJxDJVc9D1x1etcNZLAK5ZA4G/0wt1rmz+tjCs9QiLwY8Ei8CgVDXMib5AyehrbqrvM0wIDAQAB";
 
 
-    public static final String MESSAGE_FLAG0 = "ACTIVITY";
+    public static final String MESSAGE_FLAG = "ACTIVITY";
 }

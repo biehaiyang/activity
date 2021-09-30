@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.system.mapper.TAuditMapper">
+
+    <resultMap type="com.ruoyi.system.domain.TAudit" id="TAuditResult">
+        <result property="id" column="id"/>
+        <result property="createTime" column="create_time"/>
+        <result property="userId" column="user_id"/>
+        <result property="cardFront" column="card_front"/>
+        <result property="cardBack" column="card_back"/>
+        <result property="businessImg" column="business_img"/>
+        <result property="type" column="type"/>
+        <result property="status" column="status"/>
+    </resultMap>
+
+
+</mapper>
