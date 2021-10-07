@@ -1,12 +1,12 @@
 package com.ruoyi.system.domain;
 
-import com.baomidou.mybatisplus.annotation.*;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
+
 import java.io.Serializable;
-import java.util.Date;
-import java.math.BigDecimal;
 
 /**
  * 动态图片对象 t_dynamic_img
@@ -16,6 +16,7 @@ import java.math.BigDecimal;
  */
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Accessors(chain = true)
 @TableName("t_dynamic_img")
 public class TDynamicImg implements Serializable {
