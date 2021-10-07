@@ -26,5 +26,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         <result property="address" column="address"/>
     </resultMap>
 
-
+    <select id="selectByType" resultMap="TActivityDataResult">
+        select * from t_activity_data where type = #{id} order by create_time desc limit #{page}, #{size}
+    </select>
 </mapper>

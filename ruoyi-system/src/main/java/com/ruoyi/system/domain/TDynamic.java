@@ -7,6 +7,7 @@ import lombok.experimental.Accessors;
 import java.io.Serializable;
 import java.util.Date;
 import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * 动态对象 t_dynamic
@@ -64,10 +65,22 @@ public class TDynamic implements Serializable {
      */
     private Long userId;
 
+    @TableField(exist = false)
+    private String userName;
+
+    @TableField(exist = false)
+    private String photo;
+
     /**
      * 动态发布时间
      */
     @TableField(fill = FieldFill.INSERT)
     private Date createTime;
 
+
+    @TableField(exist = false)
+    private List<TDynamicImg> imgList;
+
+    @TableField (exist = false)
+    private List<TDynamicComment> commentList;
 }

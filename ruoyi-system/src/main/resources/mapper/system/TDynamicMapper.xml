@@ -16,5 +16,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         <result property="createTime" column="create_time"/>
     </resultMap>
 
-
+    <select id="selectDynamic" resultMap="TDynamicResult">
+        select * from t_dynamic order by create_time desc limit #{page},#{size}
+    </select>
 </mapper>

@@ -24,9 +24,8 @@ public class TDynamicImg implements Serializable {
 
 
     /**
-     * $column.columnComment
+     * $column
      */
-    @TableId(value = "id")
     private Long id;
 
     /**

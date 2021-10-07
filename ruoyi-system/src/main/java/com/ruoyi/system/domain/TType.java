@@ -7,6 +7,7 @@ import lombok.experimental.Accessors;
 import java.io.Serializable;
 import java.util.Date;
 import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * 所有分类对象 t_type
@@ -55,4 +56,5 @@ public class TType implements Serializable {
      */
     private Long sort;
 
+    private List<TActivityData> activityDataList;
 }
