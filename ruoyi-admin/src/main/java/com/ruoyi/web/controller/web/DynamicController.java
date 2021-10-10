@@ -70,7 +70,7 @@ public class DynamicController {
             QueryWrapper<TDynamicImg> queryWrapper = new QueryWrapper<TDynamicImg>()
                     .eq("id", tDynamic.getId());
 
-            List<TDynamicImg> list = dynamicImgService.list();
+            List<TDynamicImg> list = dynamicImgService.list(queryWrapper);
 
             tDynamic.setImgList(list);
         }
