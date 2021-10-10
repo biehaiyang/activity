@@ -127,4 +127,26 @@ public class TActivityData implements Serializable {
     @TableField(exist = false)
     private List<TActivitySpec> activitySpecs;
 
+    /**
+     * 活动图片
+     */
+    @TableField(exist = false)
+    private List<String> imgList;
+
+    /**
+     * 活动图片
+     */
+    @TableField(exist = false)
+    private List<TActivityImg> imgWebList;
+
+
+    private List<TActivityImg> imgWebContentList;
+    /**
+     * 活动内容图片
+     */
+    @TableField(exist = false)
+    private List<String> imgContentList;
+
+    @TableField(exist = false)
+    private List<TActivityComment> commentList;
 }

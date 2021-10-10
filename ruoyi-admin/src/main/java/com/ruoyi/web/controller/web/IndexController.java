@@ -81,6 +81,10 @@ public class IndexController {
         map.put("tyoe", typeList);
         map.put("tuijian", tuijianList);
         map.put("dataActivity",dataPage.getRecords());
+        map.put("isMessage", "1");
+
+
+
 
         return AjaxResult.success(map);
     }
