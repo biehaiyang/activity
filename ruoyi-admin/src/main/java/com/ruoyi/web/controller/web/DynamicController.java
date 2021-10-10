@@ -83,9 +83,9 @@ public class DynamicController {
      *
      * @param id 活动id
      */
-    @GetMapping("/query/{id:\\d+}")
+    @GetMapping("/query")
     public AjaxResult queryById(
-            @PathVariable(value = "id") Integer id) {
+            @RequestParam Integer id) {
         Map<String, Object> ajax = new HashMap<>();
         ajax.put("dynamic", tDynamicMapper.selectById(id));
         ajax.put("dynamicImgList", dynamicImgService.list(new QueryWrapper<TDynamicImg>()
@@ -121,9 +121,9 @@ public class DynamicController {
      *
      * @param id 活动id
      */
-    @DeleteMapping("/save/{id:\\d+}")
+    @DeleteMapping
     public AjaxResult delete(
-            @PathVariable(value = "id") Long id, @LoginUser TWebUser webUser) {
+            @RequestParam Integer id, @LoginUser TWebUser webUser) {
         TDynamic tDynamic = tDynamicMapper.selectById(id);
         if (isNull(tDynamic) || !Objects.equals(webUser.getId(), tDynamic.getUserId())) {
             return AjaxResult.error("动态不存在或非作者删除");
@@ -143,9 +143,9 @@ public class DynamicController {
      *
      * @param id 活动id
      */
-    @PostMapping("/star/{id:\\d+}")
+    @PostMapping("/star")
     public AjaxResult doStar(
-            @PathVariable(value = "id") Integer id, @LoginUser TWebUser webUser) {
+            @RequestParam Integer id, @LoginUser TWebUser webUser) {
         TDynamic dynamic = tDynamicMapper.selectById(id);
         tDynamicStarMapper.insert(new TDynamicStar(null, dynamic.getId(), webUser.getId(), dynamic.getUserId(), new Date()));
         return AjaxResult.success("点赞成功");
@@ -156,9 +156,9 @@ public class DynamicController {
      *
      * @param id 活动id
      */
-    @DeleteMapping("/star/{id:\\d+}")
+    @DeleteMapping("/star")
     public AjaxResult cancelStar(
-            @PathVariable(value = "id") Integer id, @LoginUser TWebUser webUser) {
+            @RequestParam Integer id, @LoginUser TWebUser webUser) {
         tDynamicStarMapper.delete(new QueryWrapper<TDynamicStar>().eq("dynamic_id", id).eq("user_id", webUser.getId()));
         return AjaxResult.success("撤销点赞成功");
     }
@@ -182,9 +182,9 @@ public class DynamicController {
      *
      * @param id 评论id
      */
-    @DeleteMapping("/comment/{id:\\d+}")
+    @DeleteMapping("/comment")
     public AjaxResult deleteComment(
-            @PathVariable(value = "id") Integer id, @LoginUser TWebUser webUser) {
+            @RequestParam Integer id, @LoginUser TWebUser webUser) {
         this.tDynamicCommentService.deleteWithValidByIds(Collections.singleton(id), true);
         return AjaxResult.success("删除评论成功");
     }
