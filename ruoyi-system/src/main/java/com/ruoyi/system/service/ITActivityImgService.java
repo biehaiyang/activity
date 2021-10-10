@@ -15,7 +15,7 @@ import java.util.List;
  * 活动图片Service接口
  *
  * @author ruoyi
- * @date 2021-10-07
+ * @date 2021-10-10
  */
 public interface ITActivityImgService extends IServicePlus<TActivityImg> {
 	/**

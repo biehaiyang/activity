@@ -25,7 +25,7 @@ import java.util.Collection;
  * 活动图片Service业务层处理
  *
  * @author ruoyi
- * @date 2021-10-07
+ * @date 2021-10-10
  */
 @Service
 public class TActivityImgServiceImpl extends ServicePlusImpl<TActivityImgMapper, TActivityImg> implements ITActivityImgService {
